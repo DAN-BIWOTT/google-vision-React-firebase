@@ -2,7 +2,7 @@
   "name": "Sinfinity",
   "private": true,
   "engines": {
-    "node": "0.0.1"
+    "node": "^0.0.1"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

@@ -1,0 +1,42 @@
+{
+    "Home": {
+        "paragraph": " My name is Sharon Kirwa. I'm a 4th year student at University Of Alberta and with your permission, I'll make a university application for you to any university or college you choose in Canada.",
+        "Why": [
+            "I have made many successful applications for my friends and family over the years.",
+            "I have experience in how to word the applications."
+        ],
+        "Why2": [
+            "I will answer any question about my experiences as a student and work-study balance.",
+            "I'll offer advice on what courses to choose from based on your result slip.(minimum requirement is a C Plain in KCSE)"
+        ]
+    },
+    "Contact": {
+        "address": "4321 California St, San Francisco, CA 12345 ",
+        "phone": "+1 123 456 1234",
+        "email": "info@company.com",
+        "facebook": "fb.com",
+        "whatsapp": "https://api.whatsapp.com/send/?phone=254740154227",
+        "youtube": "youtube.com"
+    },
+    "Features": [{
+            "icon": "fa fa-comments-o",
+            "title": "Free Consultation",
+            "text": "I will glady answer any question about canada, the application or the courses. My whats app contact is at the bottom"
+        },
+        {
+            "icon": "fa fa-folder-open",
+            "title": "The Application",
+            "text": "I will make the university application for you based on the conversation we had during consultation and the information filled in the form after login."
+        },
+        {
+            "icon": "fa fa-money",
+            "title": "Payments",
+            "text": "I will only charge 4,850/= for making the application for you, everything else including consultation is FREE."
+        },
+        {
+            "icon": "fa fa-info",
+            "title": "Open and Transparent",
+            "text": "I will be open with every step of the application and give my honest opinion to all your questions."
+        }
+    ]
+}

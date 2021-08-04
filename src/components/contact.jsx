@@ -72,7 +72,7 @@ export class Contact extends Component {
               <div className="contact-item">
                 <p>
                   <span>
-                    <i className="fa fa-phone"></i> Phone
+                    <i className="fa fa-phone"></i> whatsapp
                   </span>{" "}
                   {this.props.data ? this.props.data.phone : "loading"}
                 </p>

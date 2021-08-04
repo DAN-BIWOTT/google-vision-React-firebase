@@ -1,6 +1,6 @@
 {
     "Home": {
-        "paragraph": " My name is Sharon Kirwa. I'm a 4th year student at University Of Alberta and with your permission, I'll make a university application for you to any university or college you choose in Canada.",
+        "paragraph": " My name is Sharon Kadenyi. I'm a 4th year student at RorQuest College and with your permission, I'll make a university application for you to any university or college you choose in Canada.",
         "Why": [
             "I have made many successful applications for my friends and family over the years.",
             "I have experience in how to word the applications."
@@ -11,12 +11,10 @@
         ]
     },
     "Contact": {
-        "address": "4321 California St, San Francisco, CA 12345 ",
-        "phone": "+1 123 456 1234",
-        "email": "info@company.com",
-        "facebook": "fb.com",
-        "whatsapp": "https://api.whatsapp.com/send/?phone=254740154227",
-        "youtube": "youtube.com"
+        "address": "216 Crown Rd, Edmonton, AB T6J 2E3",
+        "phone": "+1 (587) 778-1043",
+        "email": "sharonkirwa044@gmail.com",
+        "whatsapp": "https://api.whatsapp.com/send/?phone=+15877781043"
     },
     "Features": [{
             "icon": "fa fa-comments-o",

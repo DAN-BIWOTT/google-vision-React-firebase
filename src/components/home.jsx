@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import homeImage from './style/home.jpeg';
 
 export class home extends Component {
   render() {
@@ -6,12 +7,12 @@ export class home extends Component {
         <div id="home">
         <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-md-6"> <img src="img/about.jpg" className="img-responsive" alt=""/> </div>
+            <div className="col-xs-12 col-md-6"> <img src={homeImage} className="img-responsive" alt="home image"/> </div>
             <div className="col-xs-12 col-md-6">
               <div className="home-text">
-                <h2>Study in Canada</h2>
+                <h2>LEVEL UP CREATIVITY</h2>
                 <p>{this.props.data ? this.props.data.paragraph : 'loading...'}</p>
-                <h3>Why Choose Me?</h3>
+                <h3>Why Work With Us?</h3>
                 <div className="list-style">
                   <div className="col-lg-6 col-sm-6 col-xs-12">
                     <ul>

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "janicevisionapi",
+  "private_key_id": "d5f2740595cbc03ee3484ad084558e2455a6d0be",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDL6ge+KP5FVnB6\nLo1/gf4DM3yMdcqt3xdeqyJubQeqe4hooCxHBrt2P8mZjWDpFUittXO06MHH603f\nlWvcSERAh+HU6AuUzWNZ2Gf2lmcL22Islx0hvVnDq8Elq50zvqynJmi75BPH8iPW\nAwjtvdKBCzZlhBRaUb9WQbO9xjvxk32QADtZIR0n20zebl55I/HpUwMa2vikvmPW\nZkkW0MS0pOmaukhYMd7idNOypvV1nOqW7+/8bidBnqqNqWUbowZdTuSF0LFbheUo\npR2rmTqkIYIqs0OrIJur50bZvUAndGBWAhvOd8xKow3Dh/wB6hLMXZtB/WenyYZF\na7PK5u63AgMBAAECggEAQPK3qJ/R7S/M/32YYAZ9a3OYtfxGo/6sqOCFRPrBOFHE\nbt6le7HvP4ito5TeSx8WWQ20XujL3+tYkGA9TJpP8uXUzkVievC4NkOxSV86TxJ/\nQIiZJMf0sVghWuhAV9zhjRO0xDOvAT5kn6Oz0lVlmOiDWO4qtWHYOZcPsuBS82xe\nnAnurPo4LghYwHqiJia1QN6c6uaHE7UtweESZOan2gcH0CGfoHuldeS40mjmH3ZC\nD1apOC5ZRUWqwJ4ReckbakYlMDdFbRY4mBFptfa2VMBI9vDN9osZDFal7Ca6OV/Q\nP7Drm1zYyy22ZX9EeMZkh6RVX6GkyF/CahooHvY0sQKBgQD7PRS7SeNC6Q/NTwl0\nOQulB8yHVHns8MMTh/lneEGIdB+1f6Mmg3DE9VhovcK50ayN+ytL2mvpIiOCsoh8\nykv+RSVT8F3OoKkaDCSyWInoHF3kKceImdePGD17YSxhuz/VK8N4FTHxVBVTOL/Y\nRe2KR0nDWdIiB+dpJatFUd/nAwKBgQDPx1koHXT6QFu2yY7Tbfn9qQnoZDMnZHVZ\nADgxCrDtgiWSAn7dUp30AuoNg96PeRuvLNGPhNZ9wOnmXMYtRKCTpHf2l4DlRsZz\nw13JyjZXz3oPlAsXU2ZwVu9zk6+fXBC2cE6j9y0hCiU4NZmJWpMetIEajNzmSJS+\nDgLHAWyhPQKBgDuL3ZcKSyf3rzwdCIOYZa8mqw5EMmW7JrFBYBZrBTU/OKi+6L9f\nFeJIuDyTBU0fagN4zWk8CqmF4t6+S+Uv2VUZtGAxrzojEBFRYX03yO/PkV1bnaQ9\nuj57I09T174OMHHo3npeo6isIiXIZIfxAvzsKop3hnt0Xh+owvA6GJRbAoGAC8s8\n/FHvueS9T/rQ6J9teUCHF3HYlXvWTV790YrR0Cl7CHarzNRLsvYXYv0BPROaxq68\nlnDr2+d/X1wUw60JkFfdl1myL1F9IkUMpc+clg9o1kmI96H8RpQos17GsT0Aldp6\nHESDg0SYKECinnFNuIh2a5NjVo74InGZJsKl7+ECgYEAwjXZrA49zroeu4DEzpoh\nhTpdKAlbY9abSDtQSSEYlyUTUlVSfmbt3krHUHteVUP77AlgQSxv3Qea3Z12xWhs\npVZOLtgur9Pd2Qaq9IUI2BCh5Y0XiK5QeHcbWVLVgH/Die6RorINWSScJ53jgOoc\n+O9eInZUP9ijBRqtzeLPICs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "apikey@janicevisionapi.iam.gserviceaccount.com",
+  "client_id": "107431646737782705375",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/apikey%40janicevisionapi.iam.gserviceaccount.com"
+}

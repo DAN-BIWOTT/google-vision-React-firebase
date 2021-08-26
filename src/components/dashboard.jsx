@@ -4,6 +4,7 @@ import "./style/dashboard.scss";
 import db, { storage } from '../firebase';
 import { ProgressBar } from 'react-bootstrap';
 import { useEffect } from 'react';
+import https from "https";
 
 export default function Dashboard() {
     const [state , setState] = useState({
@@ -21,8 +22,42 @@ export default function Dashboard() {
             [id] : value
         }))
     }
+
+
     const [imageAsFile, setImageAsFile] = useState('');
     const [imageAsUrl, setImageAsUrl] = useState(state.imgUrl);
+    const googleVision = async (download_url,uniId) =>{
+        const data = JSON.stringify({
+            image_url: `${download_url}`
+          })
+          
+          const options = {
+            hostname: 'localhost',
+            port: 5000,
+            path: '/mlphoto',
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Content-Length': data.length,
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+              "Accept":"*/*"
+            }
+          }
+          const req = https.request(options, res => {
+            console.log(`statusCode: ${res.statusCode}`)
+            res.on('data', d => {
+              console.log(d);
+              uploadToFirebaseAfterGoogleVision(download_url,uniId,res);
+
+            })
+          })
+          req.on('error', error => {
+            console.error(error)
+          })
+          req.write(data)
+          req.end()
+    }
     const handleImageAsFile = (e) => {
         const image = e.target.files[0];
         setImageAsFile(imageFile => (image));
@@ -36,7 +71,7 @@ export default function Dashboard() {
     }
     const handleFireBaseUpload = e => {
         e.preventDefault()
-      console.log('start of upload')
+      console.log('start of upload');
       if(imageAsFile === '' ) {
         console.error(`not an image, the image file is a ${typeof(imageAsFile)}`)
       }
@@ -53,23 +88,28 @@ export default function Dashboard() {
        .then(fireBaseUrl => {
          setImageAsUrl(prevObject => ({...prevObject, imgUrl: fireBaseUrl}))
          console.log('File available at', fireBaseUrl);
-                    db.collection("All_Files").doc(uniId).set({
-                        file_name: imageAsFile.name.toString(),
-                        id: uniId,
-                        download_url: fireBaseUrl.toString(),
-                        email:state.email,
-                        fName:state.fName,
-                        lName:state.lName,
-                        event:state.event
-                    })
-                        .then(() => {
-                            console.log("Document successfully written!");
-                        })
-                        .catch((error) => {
-                            console.error("Error writing document: ", error);
-                        });
+         googleVision(fireBaseUrl,uniId);
+                  //
        })
     })
+      }
+      const uploadToFirebaseAfterGoogleVision=(fireBaseUrl,uniId,event)=>{
+          console.log("called");
+        db.collection("All_Files").doc(uniId).set({
+            file_name: imageAsFile.name.toString(),
+            id: uniId,
+            download_url: fireBaseUrl.toString(),
+            email:state.email,
+            fName:state.fName,
+            lName:state.lName,
+            event:event
+        })
+            .then(() => {
+                console.log("Document successfully written!");
+            })
+            .catch((error) => {
+                console.error("Error writing document: ", error);
+            });
       }
      
     return (
@@ -92,10 +132,10 @@ export default function Dashboard() {
                             <label>Email</label>
                             <input onChange={handleChange} value={state.email} id="email" placeholder="Enter Contact email" className="form-control" />
                         </div>
-                        <div className="form-wrapper">
+                        {/* <div className="form-wrapper">
                             <label>Event</label>
                             <input onChange={handleChange} value={state.event} id="event" placeholder="Enter Event in picture" type="text" className="form-control" />
-                        </div>
+                        </div> */}
                         <div className="form-wrapper">
                             <input onChange={handleImageAsFile} type="file" className="form-control" id="file-control" />
                         </div>

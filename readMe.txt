@@ -1,0 +1,1 @@
+(On Windows) diable chrome security::::::: .\chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security

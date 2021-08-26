@@ -29,8 +29,8 @@ export default function RegistrationForm(props) {
                     user.email = userAuth.email;
                     user.time = Date.now();
                     if(userAuth){
-                      localStorage.setItem("logged_in",JSON.stringify(user));
-                      history.push("/dashboard");
+                      // localStorage.setItem("logged_in",JSON.stringify(user));
+                      history.push("/Login");
                     }
                   })).catch(err => {
                 console.log(err)

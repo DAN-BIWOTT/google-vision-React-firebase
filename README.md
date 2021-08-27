@@ -19,3 +19,4 @@ This is our Frontend - made use of material-ui
 This holds our image and event.
 
 **PS: your google account needs to be attached to a credit card for you to be able to use google vision.**
+https://youtu.be/nhww7k0ricU

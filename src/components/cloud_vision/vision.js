@@ -4,7 +4,7 @@ module.exports = {
     getVision: function(image_url,callback){
         let labels = "";
         const machine_site =  new vision.ImageAnnotatorClient({
-            keyFilename: './src/components/cloud_vision/APIKEY.json'
+            keyFilename: './APIKEY.json'
         });
         
          machine_site.labelDetection(image_url)

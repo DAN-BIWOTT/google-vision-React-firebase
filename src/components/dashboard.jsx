@@ -5,6 +5,7 @@ import db, { storage } from '../firebase';
 import { ProgressBar } from 'react-bootstrap';
 import { useEffect } from 'react';
 import https from "https";
+import axios from "axios";
 
 export default function Dashboard() {
     const [state , setState] = useState({
@@ -26,37 +27,45 @@ export default function Dashboard() {
 
     const [imageAsFile, setImageAsFile] = useState('');
     const [imageAsUrl, setImageAsUrl] = useState(state.imgUrl);
+
     const googleVision = async (download_url,uniId) =>{
         const data = JSON.stringify({
             image_url: `${download_url}`
+          });
+
+          axios({
+            method: 'post',
+            url: 'https://janicephotography.herokuapp.com/mlphoto',
+            headers: { 'Content-Type': 'application/json',
+                        "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+                        "Accept":"*/*" 
+                    },
+            data: data
+          }).then(function(response){
+              console.log(response);
+              uploadToFirebaseAfterGoogleVision(download_url,uniId,response.data);
           })
           
-          const options = {
-            hostname: 'localhost',
-            port: 5000,
-            path: '/mlphoto',
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Content-Length': data.length,
-              "Access-Control-Allow-Origin": "*",
-              "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-              "Accept":"*/*"
-            }
-          }
-          const req = https.request(options, res => {
-            console.log(`statusCode: ${res.statusCode}`)
-            res.on('data', d => {
-              console.log(d);
-              uploadToFirebaseAfterGoogleVision(download_url,uniId,res);
+        //   const options = {
+        //     hostname: 'janicephotography.herokuapp.com',
+        //     path: '/mlphoto',
+        //     method: 'POST',
+        //     headers: {
+        //       'Content-Type': 'application/json',
+        //       'Content-Length': data.length,
+        //       "Access-Control-Allow-Origin": "*",
+        //       "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+        //       "Accept":"*/*"
+        //     }
+        //   }
+        //   const req = https.request(options, res => {
+        //     res.on('data', d => {
+        //       console.log(d);
+        //     //   
 
-            })
-          })
-          req.on('error', error => {
-            console.error(error)
-          })
-          req.write(data)
-          req.end()
+        //     })
+        //   })
     }
     const handleImageAsFile = (e) => {
         const image = e.target.files[0];

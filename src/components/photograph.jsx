@@ -1,4 +1,5 @@
 import React from 'react';
+import Ratings from './rating';
 
 export default function Photograph(props){
     return(<>
@@ -22,6 +23,7 @@ export default function Photograph(props){
                       />{" "}
                     </a>{" "}
                   </div>
+                      <Ratings />
                 </div>
               </div>
         </>);

@@ -4,15 +4,6 @@ import Photograph from "./photograph";
 import { GetAllPhotographs } from './db/db_functions.js';
 
 export default function Gallery(){
-  const callBackendVision = async () => {
-    const response = await fetch('/MLphoto');
-    const body = await response.json();
-    console.log(body);
-    if (response.status !== 200) {
-      throw Error(body.message) 
-    }
-  };
-  callBackendVision();
     const { docs } = GetAllPhotographs('All_Files');
     console.log(docs);
     return (

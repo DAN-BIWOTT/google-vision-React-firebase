@@ -1,0 +1,40 @@
+{
+    "name": "JanicePhotography",
+    "private": true,
+    "engines": {
+        "node": ">=8.6"
+    },
+    "dependencies": {
+        "@google-cloud/vision": "^2.3.7",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.12"
+    },
+    "watch": [
+        "/src/components/cloud_vision/"
+    ],
+    "ext": "js",
+    "ignore": [
+        "*.test.ts"
+    ],
+    "delay": "2",
+    "execMap": {
+        "ts": "ts-node"
+    },
+    "scripts": {
+        "server": "nodemon index.js"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

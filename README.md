@@ -17,3 +17,5 @@ This perfoms the bulk of the AI function, all we do is send an image and extract
 This is our Frontend - made use of material-ui
 ## Firebase and FireStore.
 This holds our image and event.
+
+**PS: your google account needs to be attached to a credit card for you to be able to use google vision.**
